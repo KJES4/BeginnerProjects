@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Kat's Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="main-nav">
+        <nav>
+          <ul class="nav">
+            <li class="name">Kathryn Stacy</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+    </div>
+
+    <header>
+      <img src="images/me.png" alt="Drawing of Kat" class="profile-image">
+      <h1 class="tag name">Get In Touch</h1>
+      <p class="tag location">I can't wait to hear form you!</p>
+    </header>
+
+    <main>
+      <form action="index.html" method="post">
+
+        <h1>Contact Me</h1>
+
+        <fieldset>
+
+          <!--This is an element that lables a section in your form.
+          <legend><span class="number">1</span> Tell Me About You</legend>-->
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email">
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="user_phone">
+
+          <label for="feedback">Feedback:</label>
+          <textarea id="feedback" name="user_feedback"></textarea>
+
+
+        </fieldset>
+
+        <button type="submit">Send</button>
+
+      </form>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="https://www.facebook.com/kathryn.smith11?ref=bookmarks" target="blank" class="social facebook">Facebook</a></li>
+          <li><a href="https://twitter.com/" target="blank" class="social twitter">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/feed/" target="blank" class="social linkedIn">LinkedIn</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">Copyright 2017, Kathryn Stacy</p>
+    </footer>
+  </body>
+</html>

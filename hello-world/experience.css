@@ -1,0 +1,390 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background: #f7f5f0;
+}
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #44CDA9;
+}
+a:hover {
+  color: #6633ff;
+}
+
+/* Section Styles */
+
+.main-nav {
+  width: 100%;
+  background: black;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+    z-index: 99999;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav .name {
+  display: none;
+}
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+.nav a {
+  transition: all .5s;
+}
+.nav a:hover {
+  color: white
+}
+
+header {
+  text-align: center;
+  background: url('images/bandwFlorida.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+}
+header {
+  line-height: 1.5;
+}
+header .profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s;
+}
+header .profile-image:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+.tag {
+  background-color: #efefef;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 10px auto;
+}
+.location {
+  background-color: #222;
+  color: #F2E95C;
+}
+
+
+/*image slider*/
+
+.slider-container {
+  margin: 0 auto;
+  margin: 5% 0 1% 1%;
+  position: relative;
+  padding-bottom: 40%;
+  background: #fff;
+  border: solid 10px #ccc;
+}
+
+.slider-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image .china-pic {
+  width: 100%;
+  height: 100%;
+}
+
+#c1, #c2 {
+  display: none;
+}
+
+.pre, .nxt {
+  width: 5%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #ccc;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.pre {
+  left: 0;
+}
+
+.nxt {
+  right: 0;
+}
+
+.buttons {
+  width: 100%;
+  height: 11px;
+  bottom: 12%;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+}
+
+.dots {
+  top: -5px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+}
+
+
+#c1:checked ~ #one,
+#c2:checked ~ #two {
+  z-index: 9;
+}
+
+#c1:checked ~ .buttons #dot1,
+#c2:checked ~ .buttons #dot2 {
+  background: #fff;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  margin-right: 20px;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: 1;
+  transition: all .25s;
+}
+a.facebook {
+  background-image: url(images/facebook.png);
+}
+a.twitter {
+  background-image: url(images/twitter.png);
+}
+a.linkedIn {
+  background-image: url(images/linkedin.png);
+}
+a.social:hover {
+  opacity: .5;
+}
+.clearfix {
+  clear: both;
+}
+
+/*Story Content*/
+.card-title {
+  text-align: center;
+}
+
+.story {
+  text-align: center;
+  margin: auto;
+  padding: 20px 40px 40px;
+  max-width: 88%;
+  text-align: left;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+}
+
+.story:hover {
+  border-color: #3DB897;
+}
+
+.design-pic {
+  max-width: 100%;
+  margin: auto;
+}
+
+/*Styles for smaller screens*/
+@media screen and (max-width: 455px) {
+
+  .slider-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .buttons {
+    height: 8px;
+  }
+
+  .dots {
+    width: 15px;
+    height: 15px;
+  }
+
+  .pre, .nxt {
+    width: 2%;
+  }
+}
+
+@media screen and (min-width: 456px) {
+
+  .slider-container {
+    width: 85%;
+    margin: auto;
+  }
+
+  .buttons {
+    height: 8px;
+  }
+
+  .dots {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+  }
+
+  .pre, .nxt {
+    width: 1%;
+  }
+}
+
+@media screen and (min-width: 583px) {
+
+  .slider-container {
+    width: 85%;
+    margin: auto;
+  }
+
+  .buttons {
+    height: 8px;
+  }
+
+  .dots {
+    width: 15px;
+    height: 15px;
+    margin: 0 6px;
+  }
+
+  .pre, .nxt {
+    width: 3%;
+  }
+
+  .card-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 645px) {
+
+  .slider-container {
+    width: 88%;
+    margin: auto;
+    border: solid 12px #ccc;
+  }
+
+   .pre, .nxt {
+    width: 4%;
+  }
+
+  .dots {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+
+  header {
+    min-height: 450px;
+  }
+
+  .nav {
+    max-width: 1200px;
+  }
+
+  .nav .name {
+    display: block;
+    margin-right: auto;
+    color: white;
+  }
+
+  main {
+    padding-top: 50px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
+  .design-pic {
+    max-width: 100%;
+    max-height: 500px;
+  }
+
+  .buttons {
+    height: 8px;
+  }
+
+}
+
+@media screen and (min-width: 854px) {
+
+  .slider-container {
+    float: right;
+    max-width: 68%;
+    margin-left: 2%;
+    margin-top: 5%;
+  }
+
+  .pre, .nxt {
+    width: 4%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+
+  .slider-container {
+    padding-bottom: 35%;
+    max-width: 650px;
+  }
+
+  .story {
+    max-width: 1080px;
+  }
+}
