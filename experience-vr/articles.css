@@ -1,0 +1,207 @@
+/*global settings*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+/*link styles*/
+a {
+  text-decoration: none;
+  color: #43BFC7;
+}
+
+a:hover {
+  color: #C74C44;
+}
+
+/*responsive header Settings */
+.main-nav {
+  width: 100%;
+  background: #0F0F0F;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+
+.nav a {
+  color: #A3A3A3;
+  transition: all .5s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+
+.main-header h1 {
+  color: #fff;
+}
+
+.main-header p {
+  color: #CFCFCF;
+}
+
+.main-header {
+  text-align: center;
+  background: url('img/sky.jpg') no-repeat top center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 70px;
+}
+.main-header {
+  line-height: 1.5;
+}
+
+/*wraps the body content in a responsive container*/
+.content {
+  text-align: center;
+  border-bottom: 4px solid #ccc;
+}
+
+/*images*/
+.featured-img1 {
+  max-width: 300px;
+}
+
+.featured-img2 {
+  max-width: 400px;
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+.featured-img3 {
+  max-width: 390px;
+  margin-top: 5px;
+}
+
+/* Styles for larger screens */
+@media screen and (max-width: 450px) {
+
+  p {
+    font-size: 0.5em;
+  }
+
+  .featured-img2,
+  .featured-img3 {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+
+  p {
+    font-size: 0.5em;
+  }
+
+  .featured-img2 {
+    display: block;
+    float: left;
+  }
+
+  .featured-img3 {
+    display: block;
+    float: right;
+    margin-left: 10px;
+  }
+
+}
+
+@media screen and (min-width: 720px) {
+
+  .main-header {
+    min-height: 300px;
+  }
+
+  .nav {
+    max-width: 1200px;
+  }
+
+  .nav .name {
+    display: block;
+    margin-right: auto;
+  }
+
+  .nav {
+    float: right;
+  }
+
+  .nav li {
+    float: left;
+    margin: 0px 10px;
+  }
+
+  .content {
+    text-align: center;
+    margin: auto;
+    padding: 0 40px;
+    border-radius: 6px;
+  }
+
+  h2 {
+    font-size: 1.75em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
+  article p {
+    text-align: left;
+  }
+
+  .featured-img1 {
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 900px) {
+
+  .content {
+    margin-top: 20px;
+    padding: 20px 40px 40px;
+    max-width: 90%;
+    border-bottom: 4px solid #fff;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .main-nav {
+    min-height: 40px;
+  }
+
+  .nav li {
+    margin: 0px 25px;
+  }
+
+  .content {
+    max-width: 85%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+
+  .content {
+    max-width: 1220px;
+  }
+}
